@@ -9,7 +9,7 @@ CXXFLAGS = -O3 -std=c++17 -march=native
 OMPFLAG = -fopenmp
 PTHREADFLAG = -pthread
 
-CILKCXX =/home/bougi13/Paral/opencilk-2.1.0-x86_64-linux-gnu-ubuntu-22.04/bin/clang++
+CILKCXX = clang++
 CILKFLAGS = -O3 -std=c++17 -fopencilk
 
 COMMON = conversion_graph.cpp
@@ -41,4 +41,5 @@ cc_opencilk: cc_opencilk.cpp $(COMMON)
 
 
 clean:
+
 	rm -f cc_sequential cc_pthreads cc_openmp cc_cilk *.o
